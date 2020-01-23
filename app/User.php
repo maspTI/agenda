@@ -33,7 +33,7 @@ class User extends Authenticatable
 
     public $timestamps = false;
 
-    public function menus ()
+    public function menus()
     {
         return DB::connection('mysql2')->select("
             SELECT cod_menu,

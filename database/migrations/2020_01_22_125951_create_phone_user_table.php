@@ -14,8 +14,17 @@ class CreatePhoneUserTable extends Migration
     public function up()
     {
         Schema::create('phone_user', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->unsignedSmallInteger('user_id');
+            $table->unsignedBigInteger('phone_id');
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references("cod_usuario")
+                ->on(DB::connection(env('DB_CONNECTION2'))->getDatabaseName() . ".usuarios");
+
+            $table->foreign('phone_id')
+                ->references('id')
+                ->on(DB::connection(env('DB_CONNECTION'))->getDatabaseName() . '.phones');
         });
     }
 
