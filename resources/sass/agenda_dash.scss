@@ -1,0 +1,133 @@
+// Fonts
+@font-face {
+    font-family: 'Futura Std';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/FuturaStd-Book.svg?v=4.7.0") format("svg"),url("/fonts/FuturaStd-Book.woff2?v=4.7.0") format("woff2")
+}
+
+@font-face {
+    font-family: 'Futura Std Bold';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/FuturaStd-Bold.svg?v=4.7.0") format("svg"),url("/fonts/FuturaStd-Bold.woff2?v=4.7.0") format("woff2")
+}
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Fontawesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+    background-color: #fff
+}
+
+label {
+    font-weight: bold;
+}
+
+main {
+    min-height: 79vh;
+}
+
+footer {
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+    font-size: .75rem;
+    color: #999999;
+    background-color: #F8F8F8;
+    border-top: solid 1px #e0e0e0;
+}
+
+.indice {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.sub-indice {
+    display: block;
+    margin-left: 1rem;
+
+    &-1 {
+        margin-left: 2rem;
+        display: block;
+    }
+}
+
+.masp {
+    font-family: 'Futura Std Bold';
+    color: #be0000;
+
+    &:before {
+        content: 'MASP';
+        font-size: 18px;
+    }
+}
+
+nav.navigation {
+    background-color: #F8F8F8 !important;
+    border-bottom: solid 1px #e0e0e0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @media screen and (max-width: 990px) {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+
+    & div ul li:not(last-child){
+        margin-right: 1rem;
+    }
+
+    & div ul li a.navigation__link {
+        font-family: 'Futura Std Bold';
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 15px 15px;
+
+        &:hover {
+            background-color: $masp;
+            color: #fff !important;
+        }
+    }
+}
+a.navigation__link-sub {
+    font-family: 'Futura Std Bold';
+    text-transform: uppercase;
+    font-size: 14px;
+
+    &:hover {
+        background-color: $masp;
+        color: #fff !important;
+    }
+}
+
+.img-avatar{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+
+.badge {
+    padding: .5rem 1rem;
+}
+
+.close {
+    cursor: pointer;
+    margin-left: .5rem;
+}

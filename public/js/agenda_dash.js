@@ -49515,10 +49515,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
+/***/ "./resources/js/agenda_dash.js":
+/*!*************************************!*\
+  !*** ./resources/js/agenda_dash.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -49667,10 +49667,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/sass/agenda_dash.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/agenda_dash.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -49679,14 +49679,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!*****************************************************************************!*\
+  !*** multi ./resources/js/agenda_dash.js ./resources/sass/agenda_dash.scss ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/fonseca/Sites/agenda/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/fonseca/Sites/agenda/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/fonseca/Sites/agenda/resources/js/agenda_dash.js */"./resources/js/agenda_dash.js");
+module.exports = __webpack_require__(/*! /home/fonseca/Sites/agenda/resources/sass/agenda_dash.scss */"./resources/sass/agenda_dash.scss");
 
 
 /***/ })

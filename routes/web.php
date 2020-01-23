@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware(['auth']);
 
+Route::resource('phones', 'PhoneController');
+
 // Login Routes
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/login/{provider}', 'Auth\SocialAccountController@redirectToProvider')->name('socialite.login');
