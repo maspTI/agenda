@@ -131,7 +131,7 @@ class PhoneController extends Controller
      */
     public function destroy(Phone $phone)
     {
-        //
+        $phone->detachUsers()->delete();
     }
 
     public function fetch($filters)
