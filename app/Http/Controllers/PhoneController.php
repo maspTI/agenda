@@ -85,7 +85,13 @@ class PhoneController extends Controller
      */
     public function edit(Phone $phone)
     {
-        //
+        $phone = Phone::whereId($phone->id)->with('users')->first();
+        return view('phones.edit')
+            ->with([
+                'menus' => auth()->user()->menus(),
+                'phone' => $phone,
+                'users' => User::where('status', 1)->whereNotNull('email')->orderBy('nome')->get()
+            ]);
     }
 
     /**
@@ -97,7 +103,24 @@ class PhoneController extends Controller
      */
     public function update(Request $request, Phone $phone)
     {
-        //
+        $this->validateRequest();
+
+        $phone->update([
+            'brand' => request('marca'),
+            'model' => request('modelo'),
+            'phone_number_1' => request('telefone_1'),
+            'phone_number_2' => request('telefone_2'),
+            'imei_1' => request('imei_1'),
+            'imei_2' => request('imei_2'),
+            'quick_dial' => request('discagem_rapida'),
+            'serial_number' => strtoupper(request('numero_serie')),
+        ]);
+
+        $phone->detachUsers();
+
+        if(request('usuarios')){
+            $phone->attachUsers();
+        }
     }
 
     /**
@@ -124,8 +147,8 @@ class PhoneController extends Controller
     protected function validateRequest()
     {
         request()->validate([
-            'marca' => 'max:250',
-            'modelo' => 'max:250',
+            'marca' => 'required|max:250',
+            'modelo' => 'required|max:250',
             'telefone_1' => 'max:250',
             'telefone_2' => 'nullable|max:250',
             'imei_1' => 'nullable|max:15|min:15',

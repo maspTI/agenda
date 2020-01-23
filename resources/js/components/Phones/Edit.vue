@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="save">
+    <form @submit.prevent="update">
         <div class="form-row mt-3">
             <div class="col-md-3 form-group">
                 <label for="brand">Marca</label>
@@ -136,7 +136,7 @@
                 <label for="user">Usuário(s)</label>
                 <multiselect
                     v-model="form.users"
-                    :options="users_props"
+                    :options="users"
                     :multiple="true"
                     :close-on-select="false"
                     :clear-on-select="false"
@@ -156,7 +156,7 @@
                     type="submit"
                 >
                     <Loading v-if="loading"></Loading>
-                    <span>Enviar</span>
+                    <span>Atualizar</span>
                 </button>
             </div>
         </div>
@@ -167,8 +167,8 @@ import Loading from "../Utilities/Loading";
 import { TheMask } from "vue-the-mask";
 import Multiselect from "vue-multiselect";
 export default {
-    props: ["users_props"],
-    components: { TheMask, Multiselect, Loading },
+    props: ["users", "phone"],
+    components: { Loading, TheMask, Multiselect },
     data() {
         return {
             form: {
@@ -188,11 +188,11 @@ export default {
         };
     },
     methods: {
-        save: _.throttle(
+        update: _.throttle(
             function() {
                 this.loading = !this.loading;
                 axios
-                    .post("/phones", this.formatData())
+                    .post(`/phones/${this.phone.id}`, this.formatData())
                     .then(result => {
                         this.loading = !this.loading;
                         window.location = "/phones";
@@ -207,11 +207,11 @@ export default {
         ),
         formatData() {
             let formData = new FormData();
-            formData.append("_method", "POST");
+            formData.append("_method", "PATCH");
             formData.append("marca", this.form.brand);
             formData.append("modelo", this.form.model);
             formData.append("telefone_1", this.form.phone_number_1);
-            formData.append("telefone_2", this.form.phone_number_2);
+            formData.append("telefone_2", this.form.phone_number_2 == null ? '' : this.form.phone_number_2);
             formData.append("imei_1", this.form.imei_1);
             formData.append("imei_2", this.form.imei_2);
             formData.append("numero_serie", this.form.serial_number);
@@ -226,6 +226,9 @@ export default {
         customLabel(user) {
             return `${user.nome}`;
         }
+    },
+    created() {
+        this.form = this.phone;
     }
 };
 </script>

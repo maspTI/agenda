@@ -1,5 +1,6 @@
 <template>
-    <div class="d-flex justify-content-center" v-if="loading">
+    <!--<div class="d-flex justify-content-center" v-if="loading"> -->
+    <div class="d-flex justify-content-center">
         <div
             class="spinner-border spinner-border-sm"
             :class="spinner ? spinner : 'text-light'"

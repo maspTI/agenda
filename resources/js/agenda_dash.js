@@ -21,6 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('create-phone', require('./components/Phones/Create.vue').default);
 Vue.component('index-phone', require('./components/Phones/Index.vue').default);
+Vue.component('edit-phone', require('./components/Phones/Edit.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
