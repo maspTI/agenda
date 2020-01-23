@@ -20,7 +20,8 @@ class PhoneController extends Controller
      */
     public function index()
     {
-        return view('phones.index');
+        return view('phones.index')
+            ->with(['menus' => auth()->user()->menus()]);
     }
 
     /**
@@ -108,6 +109,16 @@ class PhoneController extends Controller
     public function destroy(Phone $phone)
     {
         //
+    }
+
+    public function fetch($filters)
+    {
+        $filters = json_decode($filters);
+        $filters->paginate = $filters->paginate == 'all' ? Phone::count() : $filters->paginate;
+
+        $phones = new Phone;
+
+        return $phones->search($filters);
     }
 
     protected function validateRequest()

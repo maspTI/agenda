@@ -16,6 +16,7 @@ Route::get('/', function () {
 })->middleware(['auth']);
 
 Route::resource('phones', 'PhoneController');
+Route::get('/phones/{filters}/fetch', 'PhoneController@fetch')->name('phones.fetch');
 
 // Login Routes
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');

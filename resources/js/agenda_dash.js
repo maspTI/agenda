@@ -20,12 +20,16 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('create-phone', require('./components/Phones/Create.vue').default);
+Vue.component('index-phone', require('./components/Phones/Index.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+
+ // Event Bus
+ export const eventBus = new Vue();
 
 const app = new Vue({
     el: '#app',
