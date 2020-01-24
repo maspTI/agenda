@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Phone;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class PhoneController extends Controller
 {
@@ -130,7 +131,7 @@ class PhoneController extends Controller
 
         return json_encode([
             'oldOwners' => $oldOwners,
-            'addressOldOwners' => route('term.refund', $phone),
+            'addressOldOwners' => route('term.refund', $phone) . "?user=" . encrypt(json_encode($oldOwners->pluck('cod_usuario')->all()[0])),
             'users' => $phone->fresh()->users,
             'addressOwners' => route('term.delivery', $phone),
             'phone' => $phone,

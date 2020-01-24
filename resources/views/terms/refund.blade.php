@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Termo de devolução {{ $phone->users->first()->nome }}</title>
+    <title>Termo de devolução {{ $user->nome }}</title>
     <link rel="stylesheet" href="{{ secure_asset('css/term.css') }}">
     <style>
         @font-face{font-family:'FuturaStd';font-style:normal;src:local("FuturaStd"),local("FuturaStd"),url(/fonts/futura/FuturaStd-Book.otf)}
@@ -26,7 +26,6 @@
                 <div class="font-weight-bold id">Identificação do(a) Colaborador(a):</div>
             </div>
             <div class="col-md-12">
-                @foreach($phone->users as $user)
                 <table border='1' class="mt-3">
                     <tbody>
                         <tr>
@@ -47,7 +46,6 @@
                         </tr>
                     </tbody>
                 </table>
-                @endforeach
             </div>
         </div>
         <div class="form-row mt-4">
@@ -103,12 +101,10 @@
             </div>
         </div>
         <div class="row mt-5">
-            @foreach($phone->users as $user)
             <div class="col-md-12">
                 <p class="text-center assinatura"></p>
-                <p class="text-center">{{ $phone->users->first()->nome }}</p>
+                <p class="text-center">{{ $user->nome }}</p>
             </div>
-            @endforeach
         </div>
         <div class="row footer">
             <div class="col-md-12 d-flex justify-content-between">
