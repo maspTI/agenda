@@ -1,0 +1,111 @@
+// Fonts
+@font-face {
+    font-family: 'Futura Std';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/FuturaStd-Book.svg?v=4.7.0") format("svg"),url("/fonts/FuturaStd-Book.woff2?v=4.7.0") format("woff2")
+}
+
+@font-face {
+    font-family: 'Futura Std Bold';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/FuturaStd-Bold.svg?v=4.7.0") format("svg"),url("/fonts/FuturaStd-Bold.woff2?v=4.7.0") format("woff2")
+}
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@page{margin:0;padding:0;size:A4;}
+@media not print{
+    body{
+        background-color:#cecece
+    }
+    .pagina{
+        margin-bottom:10px;
+        border:1pxsolid#ccc;
+    }
+}
+
+body {
+    font-family: 'FuturaStd', sans-serif;
+    font-size: 11pt;
+}
+
+p {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    width: 20%;
+    font-family: 'FuturaStdBold', sans-serif;
+}
+
+th, td {
+    padding: 3px;
+}
+
+.pagina {
+    position:relative;
+    page-break-after:always;
+    margin:0;
+    margin-left:auto;
+    margin-right:auto;
+    width:255mm;
+    height:370mm;
+    overflow:hidden;
+    background-color:#fff;
+    padding:1cm;
+}
+
+.masp-logo {
+    font-family: 'FuturaStdBold','FuturaStdBook', sans-serif;
+    font-size: 70px;
+    color: #C3322C;
+}
+
+.cabecalho {
+    margin: 15px 0;
+    &--titulo {
+        font-family: 'FuturaStdBold', sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+.id {
+    font-family: 'FuturaStdBold', sans-serif;
+}
+
+.descricao {
+    display: block;
+}
+
+.linha {
+    width: 83%;
+    border-bottom: 1px solid #000;
+}
+
+.assinatura {
+    margin: 0 auto;
+    width: 50%;
+    border-bottom: 1px solid #000;
+}
+
+.footer {
+    font-size: 9.2pt;
+    position: absolute;
+    bottom: 1cm;
+
+    &-museu {
+        font-family: 'FuturaStdBold';
+        margin-right: 1rem;
+    }
+}

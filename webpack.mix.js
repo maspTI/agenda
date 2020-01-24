@@ -12,4 +12,5 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/agenda_dash.js', 'public/js')
-   .sass('resources/sass/agenda_dash.scss', 'public/css');
+   .sass('resources/sass/agenda_dash.scss', 'public/css')
+   .sass('resources/sass/term.scss', 'public/css');

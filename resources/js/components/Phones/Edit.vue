@@ -133,12 +133,11 @@
                 ></small>
             </div>
             <div class="col-md-3 form-group">
-                <label for="user">Usuário(s)</label>
+                <label for="user">Usuário</label>
                 <multiselect
                     v-model="form.users"
                     :options="users"
-                    :multiple="true"
-                    :close-on-select="false"
+                    :close-on-select="true"
                     :clear-on-select="false"
                     track-by="nome"
                     :custom-label="customLabel"
@@ -195,6 +194,22 @@ export default {
                     .post(`/phones/${this.phone.id}`, this.formatData())
                     .then(result => {
                         this.loading = !this.loading;
+                        if (
+                            result.data.users.length &&
+                            JSON.stringify(result.data.users) !=
+                                JSON.stringify(result.data.oldOwners)
+                        ) {
+                            window.open(result.data.addressOwners);
+                        }
+
+                        if (
+                            result.data.oldOwners.length &&
+                            JSON.stringify(result.data.users) !=
+                                JSON.stringify(result.data.oldOwners)
+                        ) {
+                            window.open(result.data.addressOldOwners);
+                        }
+
                         window.location = "/phones";
                     })
                     .catch(errors => {
@@ -211,14 +226,17 @@ export default {
             formData.append("marca", this.form.brand);
             formData.append("modelo", this.form.model);
             formData.append("telefone_1", this.form.phone_number_1);
-            formData.append("telefone_2", this.form.phone_number_2 == null ? '' : this.form.phone_number_2);
+            formData.append(
+                "telefone_2",
+                this.form.phone_number_2 == null ? "" : this.form.phone_number_2
+            );
             formData.append("imei_1", this.form.imei_1);
             formData.append("imei_2", this.form.imei_2);
             formData.append("numero_serie", this.form.serial_number);
             formData.append("discagem_rapida", this.form.quick_dial);
             formData.append(
                 "usuarios",
-                this.form.users == null ? "" : JSON.stringify(this.form.users)
+                this.form.users == null ? "" : JSON.stringify([this.form.users])
             );
 
             return formData;

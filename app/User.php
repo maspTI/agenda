@@ -33,6 +33,11 @@ class User extends Authenticatable
 
     public $timestamps = false;
 
+    public function phones()
+    {
+        return $this->belongsToMany(Phone::class, 'agenda.phone_user', 'user_id', 'phone_id');
+    }
+
     public function menus()
     {
         return DB::connection('mysql2')->select("

@@ -63,7 +63,11 @@ class PhoneController extends Controller
             $phone->attachUsers();
         }
 
-        return;
+        return json_encode([
+            'users' => $phone->users,
+            'phone' => $phone,
+            'address' => route('term.delivery', $phone)
+        ]);
     }
 
     /**
@@ -116,11 +120,21 @@ class PhoneController extends Controller
             'serial_number' => strtoupper(request('numero_serie')),
         ]);
 
+        $oldOwners = $phone->users;
+
         $phone->detachUsers();
 
         if(request('usuarios')){
             $phone->attachUsers();
         }
+
+        return json_encode([
+            'oldOwners' => $oldOwners,
+            'addressOldOwners' => route('term.refund', $phone),
+            'users' => $phone->fresh()->users,
+            'addressOwners' => route('term.delivery', $phone),
+            'phone' => $phone,
+        ]);
     }
 
     /**

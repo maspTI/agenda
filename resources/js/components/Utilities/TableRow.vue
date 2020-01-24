@@ -14,13 +14,21 @@
             <span
                 v-for="user in phone.users"
                 :key="user.cod_usuario"
-                v-text="`${user.nome}`"
+                v-text="`${user.nome}` + `${phone.users.length > 1 ? '; ' : ''}`"
             ></span>
         </td>
         <td v-else v-text="`Não vinculado a usuário`"></td>
         <td>
             <a :href="`/phones/${phone.id}/edit`" class="btn btn-primary">
                 <i class="far fa-edit"></i>
+            </a>
+            <a
+                :href="`/terms/${phone.id}/delivery`"
+                class="btn btn-success"
+                v-if="phone.users.length"
+                target="_blank"
+            >
+                <i class="fas fa-file-alt"></i>
             </a>
             <button class="btn btn-danger" @click="destroy()">
                 <loading v-if="loading"></loading>

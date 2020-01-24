@@ -15,8 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware(['auth']);
 
+// Phones
 Route::resource('phones', 'PhoneController');
 Route::get('/phones/{filters}/fetch', 'PhoneController@fetch')->name('phones.fetch');
+
+// Terms
+Route::get('/terms/{phone}/delivery', 'TermController@delivery')->name('term.delivery');
+Route::get('/terms/{phone}/refund', 'TermController@refund')->name('term.refund');
 
 // Login Routes
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');

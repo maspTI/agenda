@@ -133,12 +133,11 @@
                 ></small>
             </div>
             <div class="col-md-3 form-group">
-                <label for="user">Usuário(s)</label>
+                <label for="user">Usuário</label>
                 <multiselect
                     v-model="form.users"
                     :options="users_props"
-                    :multiple="true"
-                    :close-on-select="false"
+                    :close-on-select="true"
                     :clear-on-select="false"
                     track-by="nome"
                     :custom-label="customLabel"
@@ -195,6 +194,9 @@ export default {
                     .post("/phones", this.formatData())
                     .then(result => {
                         this.loading = !this.loading;
+                        if (result.data.users.length)
+                            window.open(result.data.address);
+
                         window.location = "/phones";
                     })
                     .catch(errors => {
@@ -218,7 +220,7 @@ export default {
             formData.append("discagem_rapida", this.form.quick_dial);
             formData.append(
                 "usuarios",
-                this.form.users == null ? "" : JSON.stringify(this.form.users)
+                this.form.users == null ? "" : JSON.stringify([this.form.users])
             );
 
             return formData;
