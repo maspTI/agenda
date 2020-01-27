@@ -12,9 +12,9 @@
             <img src="{{ $contact->avatar }}" alt="{{ $contact->nome }}" class="mx-auto d-block img-thumbnail user-avatar">
             @endif
             <h3 class="text-center user-name mt-1">{{ $contact->nome }}</h3>
-            @if(count($contact->departments))
-                <p class="text-center detail-label">{{ $contact->departments->first()->nome }}</p>
-            @endif
+            {{-- @if(count($contact->departments)) --}}
+                {{-- <p class="text-center detail-label">{{ $contact->departments->first()->nome }}</p> --}}
+            {{-- @endif --}}
         </div>
         <div class="col-md-12 d-flex justify-content-around align-items-center">
             <a href="tel:015{{ $contact->phones->first()->phone_number_1 }}"><i class="fas fa-phone detail-phone"></i></a>
