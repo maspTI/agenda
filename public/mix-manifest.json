@@ -1,5 +1,7 @@
 {
+    "/js/agenda.js": "/js/agenda.js",
     "/js/agenda_dash.js": "/js/agenda_dash.js",
+    "/css/agenda.css": "/css/agenda.css",
     "/css/agenda_dash.css": "/css/agenda_dash.css",
     "/css/term.css": "/css/term.css"
 }

@@ -38,6 +38,18 @@ class User extends Authenticatable
         return $this->belongsToMany(Phone::class, 'agenda.phone_user', 'user_id', 'phone_id');
     }
 
+    public function search($filter)
+    {
+        return $this->whereHas('phones')
+            ->where(function ($query) use ($filter) {
+                $query->where('nome', 'LIKE', "%{$filter}%")
+                    ->where('email', 'LIKE', "%{$filter}%");
+            })
+            ->with('phones')
+            ->orderBy('nome')
+            ->get();
+    }
+
     public function menus()
     {
         return DB::connection('mysql2')->select("
