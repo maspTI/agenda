@@ -23,9 +23,18 @@
                     :key="phone.id"
                     ><i class="fas fa-phone contact-phone"></i
                 ></a>
-                <a :href="`mailto:${contact.email}`"><i class="far fa-envelope contact-mail"></i></a>
-                <a :href="`sms:${contact.phone_number_1}`"><i class="fas fa-comment-alt contact-sms"></i></a>
-                <a :href="`/contacts/${contact.cod_usuario}`"><i class="fas fa-info-circle contact-info"></i></a>
+                <a :href="`mailto:${contact.email}`"
+                    ><i class="far fa-envelope contact-mail"></i
+                ></a>
+                <a
+                    :href="`sms:015${phone.phone_number_1}`"
+                    v-for="phone in contact.phones"
+                    :key="`sms${phone.id}`"
+                    ><i class="fas fa-comment-alt contact-sms"></i
+                ></a>
+                <a :href="`/contacts/${contact.cod_usuario}`"
+                    ><i class="fas fa-info-circle contact-info"></i
+                ></a>
             </div>
         </div>
     </div>
@@ -41,7 +50,7 @@ export default {
     methods: {
         toggle() {
             this.details = !this.details;
-        },
+        }
     }
 };
 </script>

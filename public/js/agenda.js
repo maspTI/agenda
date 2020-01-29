@@ -1964,6 +1964,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["contact", "index"],
   data: function data() {
@@ -38182,11 +38191,16 @@ var render = function() {
                   _c("i", { staticClass: "far fa-envelope contact-mail" })
                 ]),
                 _vm._v(" "),
-                _c(
-                  "a",
-                  { attrs: { href: "sms:" + _vm.contact.phone_number_1 } },
-                  [_c("i", { staticClass: "fas fa-comment-alt contact-sms" })]
-                ),
+                _vm._l(_vm.contact.phones, function(phone) {
+                  return _c(
+                    "a",
+                    {
+                      key: "sms" + phone.id,
+                      attrs: { href: "sms:015" + phone.phone_number_1 }
+                    },
+                    [_c("i", { staticClass: "fas fa-comment-alt contact-sms" })]
+                  )
+                }),
                 _vm._v(" "),
                 _c(
                   "a",

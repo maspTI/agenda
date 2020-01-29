@@ -35,15 +35,15 @@
                         </tr>
                         <tr>
                             <th>Função</th>
-                            {{-- <td>{{ $user->role ?? '' }}</td> --}}
+                            <td>{{-- {{ $user->role ?? '' }} --}}</td>
                         </tr>
                         <tr>
                             <th>Depto.</th>
-                            {{-- <td>{{ $user->department ?? '' }}</td> --}}
+                            <td>{{-- {{ $user->department ?? '' }} --}}</td>
                         </tr>
                         <tr>
                             <th>Matrícula/CPF</th>
-                            {{-- <td>{{ $user->registration_number ?? '' }}</td> --}}
+                            <td>{{-- {{ $user->registration_number ?? '' }} --}}</td>
                         </tr>
                     </tbody>
                 </table>
