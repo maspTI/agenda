@@ -27,6 +27,12 @@
                     ><i class="far fa-envelope contact-mail"></i
                 ></a>
                 <a
+                    :href="`https://wa.me/55${phone.phone_number_1}`"
+                    v-for="phone in contact.phones"
+                    :key="`whatsapp${phone.id}`"
+                    ><i class="fab fa-whatsapp contact-whatsapp"></i></i
+                ></a>
+                <a
                     :href="`sms:015${phone.phone_number_1}`"
                     v-for="phone in contact.phones"
                     :key="`sms${phone.id}`"

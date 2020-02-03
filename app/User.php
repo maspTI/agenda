@@ -45,6 +45,7 @@ class User extends Authenticatable
                 $query->where('nome', 'LIKE', "%{$filter}%")
                     ->where('email', 'LIKE', "%{$filter}%");
             })
+            ->whereNotIn('cod_usuario', [auth()->user()->cod_usuario])
             ->with('phones')
             ->orderBy('nome')
             ->get();

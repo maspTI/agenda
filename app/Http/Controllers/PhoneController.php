@@ -131,7 +131,7 @@ class PhoneController extends Controller
 
         return json_encode([
             'oldOwners' => $oldOwners,
-            'addressOldOwners' => route('term.refund', $phone) . "?user=" . encrypt(json_encode($oldOwners->pluck('cod_usuario')->all()[0])),
+            'addressOldOwners' => count($oldOwners) ? route('term.refund', $phone) . "?user=" . encrypt(json_encode($oldOwners->pluck('cod_usuario')->all()[0])) : '',
             'users' => $phone->fresh()->users,
             'addressOwners' => route('term.delivery', $phone),
             'phone' => $phone,

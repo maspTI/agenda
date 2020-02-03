@@ -19,6 +19,7 @@
         <div class="col-md-12 d-flex justify-content-around align-items-center">
             <a href="tel:015{{ $contact->phones->first()->phone_number_1 }}"><i class="fas fa-phone detail-phone"></i></a>
             <a href="mailto:{{ $contact->email }}"><i class="far fa-envelope contact-mail"></i></a>
+            <a href="{{ 'https://wa.me/55' . $contact->phones->first()->phone_number_1 }}" ><i class="fab fa-whatsapp detail-whatsapp"></i></a>
             <a href="sms:{{ $contact->phones->first()->phone_number_1 }}"><i class="fas fa-comment-alt detail-sms"></i></a>
             {{-- <favorite-component :contact="{{ $contact }}"></favorite-component> --}}
         </div>
@@ -35,6 +36,7 @@
                 <div class="d-flex justify-content-around align-items-center">
                     <a href="tel:015{{ $phone->phone_number_1 }}"><i class="fas fa-phone detail-phone"></i></a>
                     <a href="sms:{{ $phone->phone_number_1 }}"><i class="fas fa-comment-alt detail-sms"></i></a>
+                    <a href="{{ 'https://wa.me/55' . $phone->phone_number_1 }}" ><i class="fab fa-whatsapp detail-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-md-12 d-flex justify-content-between align-items-center detail-contact">

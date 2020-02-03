@@ -17384,6 +17384,10 @@ body {
   color: #fcfcfc;
 }
 
+.contact-whatsapp {
+  color: #4DE675;
+}
+
 .contact-sms {
   color: #3490dc;
 }
@@ -17448,6 +17452,10 @@ body {
 
 .detail-mail {
   color: #fcfcfc;
+}
+
+.detail-whatsapp {
+  color: #4de675;
 }
 
 .detail-sms {
