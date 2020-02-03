@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#fff">
     <link rel="icon" href="{{ secure_asset('favicon.ico') }}">
     <title>{{ env('APP_NAME') }} @yield('title')</title>
+    <link rel="manifest" href="{{ secure_asset('manifest.json') }}">
     <link rel="stylesheet" type="text/css" href="{{ secure_asset('css/agenda_dash.css') }}">
 </head>
 <body>

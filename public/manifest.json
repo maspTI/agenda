@@ -1,0 +1,48 @@
+{
+    "short_name": "Agenda",
+    "name": "MASP Agenda",
+    "icons": [
+        {
+            "src": "./img/favicon_48.png",
+            "type": "image/png",
+            "sizes": "48x39"
+        },
+        {
+            "src": "./img/favicon_96.png",
+            "type": "image/png",
+            "sizes": "96x77"
+        },
+        {
+            "src": "./img/favicon_144.png",
+            "type": "image/png",
+            "sizes": "144x116"
+        },
+        {
+            "src": "./img/favicon_192.png",
+            "type": "image/png",
+            "sizes": "192x155"
+        },
+        {
+            "src": "./img/favicon_256.png",
+            "type": "image/png",
+            "sizes": "256x206"
+        },
+        {
+            "src": "./img/favicon_384.png",
+            "type": "image/png",
+            "sizes": "384x309"
+        },
+        {
+            "src": "./img/favicon_512.png",
+            "type": "image/png",
+            "sizes": "512x412"
+        }
+    ],
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#303030",
+    "theme_color": "#303030",
+    "description": "MASP Agenda Corporativa"
+}
