@@ -98,6 +98,10 @@ body {
         margin-right: .5rem;
     }
 
+    & i {
+        font-size: 1.25rem;
+    }
+
     &-phone {
         color: $success;
     }
@@ -165,6 +169,10 @@ body {
         width: 1.5rem;
         border-radius: 50%;
         margin-right: .5rem;
+    }
+
+    & i {
+        font-size: 1.25rem;
     }
 
     &-phone {

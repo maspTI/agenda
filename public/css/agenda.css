@@ -17372,6 +17372,10 @@ body {
   margin-right: 0.5rem;
 }
 
+.contact i {
+  font-size: 1.25rem;
+}
+
 .contact-phone {
   color: #38c172;
 }
@@ -17440,6 +17444,10 @@ body {
   width: 1.5rem;
   border-radius: 50%;
   margin-right: 0.5rem;
+}
+
+.detail i {
+  font-size: 1.25rem;
 }
 
 .detail-phone {
