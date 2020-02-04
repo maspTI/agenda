@@ -5,37 +5,37 @@
         {
             "src": "./img/favicon_48.png",
             "type": "image/png",
-            "sizes": "48x39"
+            "sizes": "48x48"
         },
         {
             "src": "./img/favicon_96.png",
             "type": "image/png",
-            "sizes": "96x77"
+            "sizes": "96x96"
         },
         {
             "src": "./img/favicon_144.png",
             "type": "image/png",
-            "sizes": "144x116"
+            "sizes": "144x144"
         },
         {
             "src": "./img/favicon_192.png",
             "type": "image/png",
-            "sizes": "192x155"
+            "sizes": "192x192"
         },
         {
             "src": "./img/favicon_256.png",
             "type": "image/png",
-            "sizes": "256x206"
+            "sizes": "256x256"
         },
         {
             "src": "./img/favicon_384.png",
             "type": "image/png",
-            "sizes": "384x309"
+            "sizes": "384x384"
         },
         {
             "src": "./img/favicon_512.png",
             "type": "image/png",
-            "sizes": "512x412"
+            "sizes": "512x512"
         }
     ],
     "start_url": "/",
