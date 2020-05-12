@@ -81,18 +81,7 @@
         </div>
         <div class="row mt-3">
             <div class="col-md-12">
-                <p class="text-justify">Declaro ter recebido do Museu de Arte de São Paulo Assis Chateaubriand (“MASP”), a título de empréstimo, o equipamento descrito neste Termo de Responsabilidade, comprometendo-me a mantê-lo em perfeito estado de conservação, ciente de que:</p>
-            </div>
-        </div>
-        <div class="row mt-1">
-            <div class="col-md-12">
-                <ol>
-                    <li class="text-justify">Cumprirei com as Normas de Utilização de Aparelhos Celulares (Anexo I).</li>
-                    <li class="text-justify">Em caso de roubo ou furto do aparelho, o MASP providenciará a reposição do equipamento sem cobrança adicional de valores ao colaborador, que deverá notificar por escrito o Museu mediante a apresentação do respectivo Boletim de Ocorrência em até 48 (quarenta e oito) horas úteis.</li>
-                    <li class="text-justify">Nos casos em que o equipamento for danificado ou inutilizado por uso inadequado, negligência ou em caso de extravio, o MASP providenciará a substituição do equipamento por outro similar ou equivalente disponível no mercado, e cobrará do colaborador o valor correspondente à reposição.</li>
-                    <li class="text-justify">No caso de rescisão do meu contrato de trabalho, o equipamento será devolvido completo, em perfeito estado de conservação, considerando-se o tempo de vida útil do equipamento, ao Departamento de Tecnologia de Informação do Museu.</li>
-                    <li class="text-justify">O MASP providenciará a assistência técnica e o apoio necessário para o uso corrente do equipamento.</li>
-                </ol>
+                <p class="text-justify">Declaro e confirmo a devolução do equipamento descrito no presente Termo, cedido pelo Museu de Arte de São Paulo Assis Chateaubriand, a título de empréstimo.</p>
             </div>
         </div>
         <div class="row mt-2">
@@ -103,43 +92,8 @@
         <div class="row mt-5">
             <div class="col-md-12">
                 <p class="text-center assinatura"></p>
-                <p class="text-center">{{ $user->nome }}</p>
-            </div>
-        </div>
-        <div class="row footer">
-            <div class="col-md-12 d-flex justify-content-between">
-                <span class="footer-museu">MUSEU DE ARTE DE SÃO PAULO ASSIS CHATEAUBRIAND</span>
-                <span class="footer-endereco"> Av Paulista, 1578 01310-200 São Paulo SP Brasil T +55 11 31495959 www.masp.org.br</span>
-            </div>
-        </div>
-    </div>
-    <div class="pagina">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-right masp-logo">MASP</h1>
-            </div>
-            <div class="col-md-12 cabecalho">
-                <h6 class="text-center cabecalho--titulo">Anexo I</h6>
-                <h6 class="text-center cabecalho--titulo">NORMAS DE UTILIZAÇÃO DE APARELHOS CELULARES</h6>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-12">
-                <p class="text-justify">Declaro que utilizarei o aparelho celular corporativo, fornecido a título de empréstimo pelo Museu de Arte de São Paulo Assis Chateaubriand (“MASP”) para meu uso, ciente e comprometido em honrar as seguintes Normas de Utilização:</p>
-            </div>
-        </div>
-        <div class="row mt-1">
-            <div class="col-md-12">
-                <ol>
-                    <li class="text-justify">A utilização do aparelho celular corporativo constitui ferramenta de trabalho, destinada ao atendimento das necessidades profissionais do(a) colaborador(a).</li>
-                    <li class="text-justify">O MASP se reserva o direito de solicitar a posse dos aparelhos em caso de necessidade, seja para reparo, substituição ou inutilização, dispensada justificativa prévia.</li>
-                    <li class="text-justify">Juntamente com o aparelho será disponibilizado plano operado pela companhia VIVO, que não poderá, em nenhuma hipótese sem a prévia autorização por escrito da Diretoria, ser alterado pelo(a) colaborador(a).</li>
-                    <li class="text-justify">Alcançado o limite mensal de 1GB do pacote de dados pelo(a) colaborador(a), este será automaticamente reduzido. Recomenda-se, portanto, a utilização da rede WIFI disponibilizada gratuitamente pelo MASP durante todo o período em que estiver nas dependências do Museu.</li>
-                    <li class="text-justify">Para realização de chamadas interurbanas, o(a) colaborador deverá utilizar o código 15 da operadora VIVO, inserido previamente ao DDD. As chamadas interurbanas realizadas com o código 15 estão livres de tarifação.</li>
-                    <li class="text-justify">O(A) colaborador(a) não está autorizado(a) a realizar chamadas interurbanas por meio de outras operadoras. Caso descumprir, obriga-se a arcar com os custos adicionais que eventualmente incorrer.</li>
-                    <li class="text-justify">Em caso de utilização do aparelho fora do país, o pedido justificado para liberação de roaming de dados deverá ser encaminhado para o Departamento de Tecnologia de Informação e autorizado pela Diretoria.</li>
-                    <li class="text-justify">Toda informação relacionada às atividades do MASP é sigilosa e o(a) colaborador(a) tem o dever de investir esforços para preservar o sigilo de informação confidencial e de quaisquer outras informações que possam prejudicar as atividades do Museu, seus patrocinadores ou parceiros.</li>
-                </ol>
+                <p class="text-center">MUSEU DE ARTE DE SÃO PAULO ASSIS CHATEAUBRIAND</p>
+                <p class="text-center">[p. Retana Toletdo Geo]</p>
             </div>
         </div>
         <div class="row footer">

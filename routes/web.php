@@ -21,7 +21,7 @@ Route::get('/phones/{filters}/fetch', 'PhoneController@fetch')->name('phones.fet
 
 // Terms
 Route::get('/terms/{phone}/delivery', 'TermController@delivery')->name('term.delivery');
-Route::get('/terms/{data}/refund', 'TermController@refund')->name('term.refund');
+Route::get('/terms/{phone}/refund', 'TermController@refund')->name('term.refund');
 
 // Contacts
 Route::get('/', 'ContactController@index')->name('contacts.index');
