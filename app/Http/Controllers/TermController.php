@@ -19,7 +19,7 @@ class TermController extends Controller
     {
         return view('terms.delivery')->with([
             'phone' => $phone,
-            'date' => Carbon::now()
+            'date' => Carbon::now()->locale('pt_br')
         ]);
     }
 
@@ -28,7 +28,7 @@ class TermController extends Controller
         return view('terms.refund')->with([
             'phone' => $phone,
             'user' => User::where('cod_usuario', decrypt(request('user')))->first(),
-            'date' => Carbon::now()
+            'date' => Carbon::now()->locale('pt_br')
         ]);
     }
 }
