@@ -90,11 +90,13 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <p class="text-center assinatura"></p>
                 <p class="text-center">{{ $user->nome }}</p>
             </div>
-            <div class="col-md-6">
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
                 <p class="text-center assinatura"></p>
                 <p class="text-center">MUSEU DE ARTE DE SÃO PAULO ASSIS CHATEAUBRIAND</p>
                 <p class="text-center">[p. Retana Toletdo Geo]</p>
